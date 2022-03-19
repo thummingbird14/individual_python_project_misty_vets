@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/vets/{{vet.id}}" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{vet.name}}" required>
+  </div>
+
+  <button type="submit">Update Vet</button>
+
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

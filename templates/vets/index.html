@@ -3,7 +3,7 @@
 {% block content %}
     {% for vet in all_vets %}
         
-        {{vet.id}} <a href="/vets/{{vet.id}}">{{vet.name}}</a> <a href="/vets/{{vet.id}}/delete">Delete Vet</a>
+        <p>{{vet.id}} <a href="/vets/{{vet.id}}">{{vet.name}}</a> <a href="/vets/{{vet.id}}/delete">Delete Vet</a></p>
             
     {% endfor %}
 

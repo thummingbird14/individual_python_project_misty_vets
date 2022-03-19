@@ -31,7 +31,7 @@ def select(id):
     return vet
 
 def update(vet):
-    sql = "UPDATE tasks SET (name) = (%s) WHERE id = %s"
+    sql = "UPDATE vets SET name = %s WHERE id = %s"
     values = [vet.name, vet.id]
     run_sql(sql, values)     
 
