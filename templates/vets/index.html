@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for vet in all_vets %}
+        
+        {{vet.id}} <a href="/vets/{{vet.id}}">{{vet.name}}</a> <a href="/vets/{{vet.id}}/delete">Delete Vet</a>
+            
+    {% endfor %}
+
+    <p><a href="/vets/new">Add Vet</a></p>   
+{% endblock %}
