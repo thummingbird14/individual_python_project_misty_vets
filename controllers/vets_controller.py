@@ -2,7 +2,7 @@ from flask import Blueprint, Flask, render_template, redirect, request
 from repositories import vet_repository
 from models.vet import Vet
 
-vets_blueprint = Blueprint("tasks", __name__)
+vets_blueprint = Blueprint("vets", __name__)
 
 @vets_blueprint.route("/vets")
 def vets():

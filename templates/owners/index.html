@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for owner in all_owners %}
+        
+        <p>{{owner.id}} <a href="/owners/{{owner.id}}">{{owner.name}} {{owner.address}} {{owner.phone_no}}</a> <a href="/owners/{{owner.id}}/delete">Delete Owner</a></p>
+            
+    {% endfor %}
+
+    <p><a href="/owners/new">Add Owner</a></p>   
+{% endblock %}
