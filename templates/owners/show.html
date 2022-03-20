@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <p>{{owner.name}} {{owner.address}} {{owner.phone_no}}</p>
+    <p><a href="/owners/{{owner.id}}/edit">Edit</a></p>
+</div>
+
+{% endblock %}
