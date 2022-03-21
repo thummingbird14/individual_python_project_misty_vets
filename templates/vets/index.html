@@ -1,11 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
+<table>
+    <tr>
+        <th>Vet Name</th>
+        <th> </th>
+    </tr>
     {% for vet in all_vets %}
+    <tr>
+        <td><a href="/vets/{{vet.id}}">{{vet.name}}</a></td>
+        <td><a href="/vets/{{vet.id}}/delete">Delete Vet</a></td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>                
+    {% endfor %}
+</table>
+
+<p><a href="/vets/new">Add Vet</a></p> 
+
+<p>Click on Vet to update</p>
+
+    <!-- {% for vet in all_vets %}
         
         <p>{{vet.id}} <a href="/vets/{{vet.id}}">{{vet.name}}</a> <a href="/vets/{{vet.id}}/delete">Delete Vet</a></p>
             
     {% endfor %}
 
-    <p><a href="/vets/new">Add Vet</a></p>   
+    <p><a href="/vets/new">Add Vet</a></p> 
+    <p>Click on vet to update</p>   -->
 {% endblock %}

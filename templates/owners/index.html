@@ -1,11 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% for owner in all_owners %}
-        
-        <p>{{owner.id}} <a href="/owners/{{owner.id}}">{{owner.name}} {{owner.address}} {{owner.phone_no}}</a> <a href="/owners/{{owner.id}}/delete">Delete Owner</a></p>
-            
-    {% endfor %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No</th>
+            <th> </th>
+        </tr>
+        {% for owner in all_owners %}
+        <tr>
+            <td><a href="/owners/{{owner.id}}">{{owner.name}}</a></td>
+            <td>{{owner.address}}</td>
+            <td>{{owner.phone_no}}</td>
+            <td><a href="/owners/{{owner.id}}/delete">Delete Owner</a></td>
+        </tr>
+        <tr>
+            <td> </td>
+        </tr>                
+        {% endfor %}
+    </table>
 
-    <p><a href="/owners/new">Add Owner</a></p>   
+    <p><a href="/owners/new">Add Owner</a></p> 
+    
+    <p>Click on owner to update</p>
 {% endblock %}
