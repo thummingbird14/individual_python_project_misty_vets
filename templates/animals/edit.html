@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <form action="/animals/{{animal.id}}" method="post">  
+        
+
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{animal.name}}" required>
+          </div>
+        <div>
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="text" id="date_of_birth" name="date_of_birth" value="{{animal.date_of_birth}}" required>
+        </div>
+        
+        <div>
+            <label for="species">Species:</label>
+            <input type="text" id="species" name="species" value="{{animal.species}}" required>
+        </div>
+
+        <div>
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex" value="{{animal.sex}}" required>
+        </div>
+
+        <div>
+            <label for="treatment_notes">Treatment Notes:</label>
+            <input type="text" id="treatment_notes" name="treatment_notes" value="{{animal.treatment_notes}}" required>
+        </div>
+
+        <div>
+            <label for="owner">Owner:</label>
+            <select id="owner" name="owner_id">
+                {% for owner in all_owners %}
+                <option value="{{ owner.id }}"
+                {% if animal.owner.id== owner.id %} selected="selected"{% endif %}>
+                {{ owner.name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div>
+            <label for="vet">Vet:</label>
+            <select id="vet" name="vet_id">
+                {% for vet in all_vets %}
+                <option value="{{ vet.id }}"
+                {% if animal.vet.id== vet.id %} selected="selected"{% endif %}>
+                {{ vet.name }}
+                </option>
+                {% endfor %} 
+            </select>
+            </div>    
+        <button type="submit">Update Animal</button>
+    
+    </form>
+
+{% endblock %}

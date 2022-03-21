@@ -39,6 +39,11 @@ def select(id):
         animal = Animal(result['name'], result['date_of_birth'], result['species'], result['sex'], result['treatment_notes'], owner, vet, result['id'] )
     return animal
 
+def update(animal):
+    sql = "UPDATE animals SET (name, date_of_birth, species, sex, treatment_notes, owner_id, vet_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [animal.name, animal.date_of_birth, animal.species, animal.sex, animal.treatment_notes, animal.owner.id, animal.vet.id, animal.id]
+    run_sql(sql, values)     
+
 
 def delete_all():
     sql = "DELETE FROM animals"
