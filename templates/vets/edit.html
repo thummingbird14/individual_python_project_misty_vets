@@ -2,10 +2,10 @@
 {% block content %}
 
 <form action="/vets/{{vet.id}}" method="post">
-  <div>
+  <p>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value="{{vet.name}}" required>
-  </div>
+  </p>
 
   <button type="submit">Update Vet</button>
 
