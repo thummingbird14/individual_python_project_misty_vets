@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for animal in all_animals %}
+        
+        <p>{{animal.id}} <a href="/animals/{{animal.id}}">{{animal.name}} {{animal.date_of_birth}} {{animal.species}} {{animal.sex}} {{animal.treatment_notes}} {{animal.owner.name}} {{animal.vet.name}}</a> <a href="/animals/{{animal.id}}/delete">Delete Animal</a></p>
+            
+    {% endfor %}
+
+    <p><a href="/animals/new">Add Animal</a></p>   
+{% endblock %}
