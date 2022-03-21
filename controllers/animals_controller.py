@@ -64,5 +64,10 @@ def update_animal(id):
     animal_repository.update(animal)
     return redirect('/animals')
 
+@animals_blueprint.route("/animals/<id>/delete")
+def delete_animal(id):
+    animal_repository.delete(id)
+    return redirect('/animals')
+
 
 
