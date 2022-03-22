@@ -2,7 +2,7 @@ body{
     font-family: "Helvetica", arial, sans-serif; 
     font-size: 16px;
     background-image: url("cat.jpeg"); 
-    background-color: bisque;
+    background-color: antiquewhite;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,6 +16,14 @@ h1{
 
 a{
   color:  blue;
+}
+
+button{
+  background-color: burlywood;
+}
+
+.delete_button{
+  color: red;
 }
 
 form  { display: table;      }
