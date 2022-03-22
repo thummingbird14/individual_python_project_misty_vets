@@ -27,7 +27,7 @@ for vet in results:
 
 owner_repository.delete_all()
 
-owner_1 = Owner("Anita O'Rourke", "40 East Kilngate Place", "0131 6661234")
+owner_1 = Owner("Louise O'Rourke", "40 East Kilngate Place", "0131 6661234")
 owner_2 = Owner("Fred Anderson", "62 Hyvot View", "0131 2221234")
 owner_3 = Owner("Sarah James", "316 Lasswade Road", "0131 3331234")
 
