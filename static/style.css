@@ -14,6 +14,10 @@ h1{
   left: 450px;
 }
 
+a{
+  color:  blue;
+}
+
 form  { display: table;      }
 p     { display: table-row;  }
 label { display: table-cell; }
