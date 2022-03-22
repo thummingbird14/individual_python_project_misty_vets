@@ -3,48 +3,53 @@
 
     <form action="/animals" method="post">
         
-        <div>
+        <p>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Name" required>
-        </div>
+        </p>
     
-        <div>
+        <p>
             <label for="date_of_birth">Date of Birth:</label>
             <input type="text" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" required>
-        </div>
+        </p>
         
-        <div>
+        <p>
             <label for="species">Species:</label>
             <input type="text" id="species" name="species" placeholder="Species" required>
-        </div>
+        </p>
 
-        <div>
+        <p>
             <label for="sex">Sex:</label>
-            <input type="text" id="sex" name="sex" placeholder="Sex" required>
-        </div>
+            <select id="sex" name="sex">
+                <option value="M">M</option>
+                <option value="F">F</option>
+                <option value="N/A">N/A</option>
+            </select>
+            <!-- <input type="text" id="sex" name="sex" placeholder="Sex" required> -->
+        </p>
 
-        <div>
+        <p>
             <label for="treatment_notes">Treatment Notes:</label>
             <input type="text" id="treatment_notes" name="treatment_notes" placeholder="Treatment Notes" required>
-        </div>
+        </p>
 
-        <div>
+        <p>
             <label for="owner">Owner:</label>
             <select id="owner" name="owner_id">
                 {% for owner in all_owners %}
                     <option value="{{owner.id}}">{{owner.name}}</option>
                 {% endfor %}
             </select>
-        </div>
+        </p>
 
-        <div>
+        <p>
             <label for="vet">Vet:</label>
             <select id="vet" name="vet_id">
                 {% for vet in all_vets %}
                     <option value="{{vet.id}}">{{vet.name}}</option>
                 {% endfor %}
             </select>
-            </div>    
+        </p>    
         <button type="submit">Add Animal</button>
     
     </form>

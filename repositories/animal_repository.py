@@ -17,7 +17,7 @@ def save(animal):
 def select_all():
     animals = []
 
-    sql = "SELECT * FROM animals"
+    sql = "SELECT * FROM animals ORDER BY vet_id"
     results = run_sql(sql)
 
     for row in results:

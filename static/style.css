@@ -5,6 +5,7 @@ body{
     background-color: bisque;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
 form  { display: table;      }
