@@ -17,7 +17,7 @@ CREATE TABLE owners (
 CREATE TABLE animals (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    date_of_birth VARCHAR(255),
+    date_of_birth DATE,
     species VARCHAR(255),
     sex VARCHAR(255),
     treatment_notes TEXT,

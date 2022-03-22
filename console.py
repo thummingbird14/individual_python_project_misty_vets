@@ -42,9 +42,9 @@ for owner in results:
 
 animal_repository.delete_all()
 
-animal_1 = Animal("Jess", "05/04/2019", "Dog", "F", "Ear infection, given antibiotics", owner_1, vet_1)
-animal_2 = Animal("Sophie", "01/03/2015", "Cat", "F", "Sophie's treatment notes", owner_1, vet_1)
-animal_3 = Animal("Jodie", "11/08/2012", "Dog", "F", "Jodie's treatment notes", owner_2, vet_3)
+animal_1 = Animal("Jess", "2019-04-05", "Dog", "F", "Ear infection, given antibiotics", owner_1, vet_1)
+animal_2 = Animal("Sophie", "2015-04-01", "Cat", "F", "Sophie's treatment notes", owner_1, vet_1)
+animal_3 = Animal("Jodie", "2012-08-12", "Dog", "F", "Jodie's treatment notes", owner_2, vet_3)
 
 animal_repository.save(animal_1)
 animal_repository.save(animal_2)
