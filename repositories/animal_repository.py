@@ -24,12 +24,8 @@ def select_all():
         owner = owner_repository.select(row['owner_id'])
         vet = vet_repository.select(row['vet_id'])
         date_of_birth_ccyy_mm_dd = row['date_of_birth']
-        # date_of_birth_yyyy = date_of_birth_ccyy_mm_dd.strftime("%Y")
-        # date_of_birth_mm = date_of_birth_ccyy_mm_dd.strftime("%m")
-        # date_of_birth_dd = date_of_birth_ccyy_mm_dd.strftime("%d")
         date_of_birth_dd_mm_ccyy = date_of_birth_ccyy_mm_dd.strftime("%d/%m/%Y")
         animal = Animal(row['name'], date_of_birth_dd_mm_ccyy, row['species'], row['sex'], row['treatment_notes'], owner, vet, row['id'] )
-        # animal = Animal(row['name'], row['date_of_birth'], row['species'], row['sex'], row['treatment_notes'], owner, vet, row['id'] )
         animals.append(animal)
     return animals
 

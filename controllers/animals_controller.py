@@ -1,4 +1,5 @@
 from flask import Blueprint, Flask, render_template, redirect, request
+from datetime import datetime
 
 from repositories import animal_repository
 from repositories import owner_repository
@@ -17,7 +18,8 @@ def animals():
 def new_animal():
     owners = owner_repository.select_all()
     vets = vet_repository.select_all()
-    return render_template("animals/new.html", all_owners = owners, all_vets = vets)
+    today = datetime.today().strftime('%Y-%m-%d')
+    return render_template("animals/new.html", all_owners = owners, all_vets = vets, today = today)
 
 @animals_blueprint.route("/animals", methods=["POST"])
 def create_animal():
@@ -46,7 +48,8 @@ def edit_animal(id):
     animal = animal_repository.select(id)
     owners = owner_repository.select_all()
     vets = vet_repository.select_all()
-    return render_template('animals/edit.html', animal=animal, all_owners=owners, all_vets=vets)
+    today = datetime.today().strftime('%Y-%m-%d')
+    return render_template('animals/edit.html', animal=animal, all_owners=owners, all_vets=vets, today=today)
 
 @animals_blueprint.route("/animals/<id>", methods=['POST'])
 def update_animal(id):

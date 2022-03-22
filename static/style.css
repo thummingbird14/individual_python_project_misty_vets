@@ -8,6 +8,12 @@ body{
     background-attachment: fixed;
   }
 
+h1{
+  position: fixed;
+  bottom: 75px;
+  left: 450px;
+}
+
 form  { display: table;      }
 p     { display: table-row;  }
 label { display: table-cell; }
