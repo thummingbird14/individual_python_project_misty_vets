@@ -22,11 +22,6 @@ def create_owner():
     owner_repository.save(owner)
     return redirect('/owners')
 
-# @owners_blueprint.route("/owners/<id>", methods=['GET'])
-# def show_owner(id):
-#     owner = owner_repository.select(id)
-#     return render_template('owners/show.html', owner = owner)
-
 @owners_blueprint.route("/owners/<id>/edit", methods=['GET'])
 def edit_owner(id):
     owner = owner_repository.select(id)

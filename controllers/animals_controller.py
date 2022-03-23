@@ -38,11 +38,6 @@ def create_animal():
 
     return redirect('/animals')
 
-# @animals_blueprint.route("/animals/<id>", methods=['GET'])
-# def show_animal(id):
-    # animal = animal_repository.select(id)
-    # return render_template('animals/show.html', animal = animal)
-
 @animals_blueprint.route("/animals/<id>/edit", methods=['GET'])
 def edit_animal(id):
     animal = animal_repository.select(id)

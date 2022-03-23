@@ -8,7 +8,7 @@ app.register_blueprint(vets_blueprint)
 app.register_blueprint(owners_blueprint)
 app.register_blueprint(animals_blueprint)
 
-@app.route('/')
+@app.route('/misty_vets')
 def home():
     return render_template('index.html')
 

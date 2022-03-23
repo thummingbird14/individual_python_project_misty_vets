@@ -1,7 +1,3 @@
-from controllers.owners_controller import owners
-from models.vet import Vet
-
-
 class Animal:
     def __init__(self, name, date_of_birth, species, sex, treatment_notes, owner, vet, id=None):
         self.name = name
