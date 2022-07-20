@@ -14,6 +14,9 @@
     
     {% for animal in all_animals %}
         <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
             <td><a href="/animals/{{animal.id}}/edit">{{animal.name}}</a></td>
             <td>{{animal.date_of_birth}}</td>
             <td>{{animal.species}}</td>
@@ -24,13 +27,11 @@
         </tr>
         <tr>
             <td colspan=6>{{animal.treatment_notes}}</td>
-        </tr>
-        <tr>
-            <td> </td>
-        </tr>
+        </tr>  
     {% endfor %}
 </table>
+    <br>
     <p><a href="/animals/new"><button>Add Animal</button></a></p>
-    
+    <br>
     <p>Click on animal to update</p>
 {% endblock %}

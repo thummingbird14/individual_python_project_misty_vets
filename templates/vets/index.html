@@ -8,17 +8,18 @@
     </tr>
     {% for vet in all_vets %}
     <tr>
+        <td>&nbsp;</td>
+    </tr>         
+    <tr>
         <td><a href="/vets/{{vet.id}}/edit">{{vet.name}}</a></td>
         <td><a href="/vets/{{vet.id}}/delete"><button class="delete_button">Delete Vet</button></a></td>
     </tr>
-    <tr>
-        <td> </td>
-    </tr>                
+           
     {% endfor %}
 </table>
-
+<br>
 <p><a href="/vets/new"><button>Add Vet</button></a></p> 
-
+<br>
 <p>Click on Vet to update</p>
 
 {% endblock %}

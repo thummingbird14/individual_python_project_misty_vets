@@ -8,16 +8,17 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{animal.name}}" required>
         </p>
+        <br>
         <p>
             <label for="date_of_birth">Date of Birth:</label>
             <input type="date" id="date_of_birth" name="date_of_birth" value="{{animal.date_of_birth}}" max="{{today}}" required>
         </p>
-        
+        <br>
         <p>
             <label for="species">Species:</label>
             <input type="text" id="species" name="species" value="{{animal.species}}" required>
         </p>
-
+        <br>
         <p>
             <label for="sex">Sex:</label>
             <select id="sex" name="sex">
@@ -27,12 +28,12 @@
                 <option value="N/A">N/A</option>
             </select>
         </p>
-
+        <br>
         <p>
             <label for="treatment_notes">Treatment Notes:</label>
             <input type="text" id="treatment_notes" name="treatment_notes" value="{{animal.treatment_notes}}" size="150" required>
         </p>
-
+        <br>
         <p>
             <label for="owner">Owner:</label>
             <select id="owner" name="owner_id">
@@ -44,7 +45,7 @@
                 {% endfor %}
             </select>
         </p>
-
+        <br>
         <p>
             <label for="vet">Vet:</label>
             <select id="vet" name="vet_id">
@@ -55,9 +56,9 @@
                 </option>
                 {% endfor %} 
             </select>
-        </p>    
+        </p>
+        <br>    
         <button type="submit">Update Animal</button>
-    
     </form>
 
 {% endblock %}

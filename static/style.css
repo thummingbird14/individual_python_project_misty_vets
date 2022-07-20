@@ -14,6 +14,10 @@ h1{
   left: 450px;
 }
 
+.menu li{
+  display: inline;
+}
+
 a{
   color:  blue;
 }
