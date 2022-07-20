@@ -24,6 +24,7 @@ a{
 
 button{
   background-color: burlywood;
+  border-radius: 5px;
 }
 
 .delete_button{

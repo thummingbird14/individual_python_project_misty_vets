@@ -24,6 +24,7 @@
             <td>{{animal.owner.name}}</td>
             <td>{{animal.vet.name}}</td>
             <td><a href="/animals/{{animal.id}}/delete"><button class="delete_button">Delete Animal</button></a></td>
+            <!-- <td><a href="/animals/{{animal.id}}/delete"><button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button></a></td> -->
         </tr>
         <tr>
             <td colspan=6>{{animal.treatment_notes}}</td>
@@ -33,5 +34,5 @@
     <br>
     <p><a href="/animals/new"><button>Add Animal</button></a></p>
     <br>
-    <p>Click on animal to update</p>
+    <p><i>Click on animal to update</i></p>
 {% endblock %}
